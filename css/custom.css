@@ -1,3 +1,15 @@
+/* HEADER - NAV BAR LOGO */
+header .navbar-brand img {
+    max-height: 44px;
+}
+header .navbar-brand {
+    padding: 12px 0;
+}
+
+header.sticky .navbar-brand {
+    padding: 12px 0;
+}
+
 /* Eniciale – slider "Os nossos serviços": equal height */
 .services-swiper .swiper-wrapper {
     align-items: stretch; /* todos os slides esticam à mesma altura */
