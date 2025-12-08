@@ -1,0 +1,23 @@
+/* Eniciale – slider "Os nossos serviços": equal height */
+.services-swiper .swiper-wrapper {
+    align-items: stretch; /* todos os slides esticam à mesma altura */
+}
+
+.services-swiper .swiper-slide {
+    display: flex; /* permite o stretch funcionar */
+    height: auto;
+}
+
+.services-swiper .services-box-style-02 {
+    width: 100%;
+}
+
+.services-swiper .services-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-swiper .services-box-content {
+    margin-top: auto; /* empurra o texto para baixo, botão fica alinhado */
+}
