@@ -10,6 +10,30 @@ header.sticky .navbar-brand {
     padding: 12px 0;
 }
 
+/* FOOTER  */
+
+footer .footer-bottom-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #000;
+    padding: 20px;
+}
+footer .footer-bottom-container a {
+    height: 34px;
+}
+
+footer .footer-bottom-container .img-apoios {
+    height: 34px;
+    width: auto;
+}
+
 /* Eniciale – slider "Os nossos serviços": equal height */
 .services-swiper .swiper-wrapper {
     align-items: stretch; /* todos os slides esticam à mesma altura */
