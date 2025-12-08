@@ -10,6 +10,23 @@ header.sticky .navbar-brand {
     padding: 12px 0;
 }
 
+/* Active link */
+.navbar .navbar-nav .nav-item:hover .nav-link,
+.navbar .navbar-nav .nav-item.active .nav-link {
+    color: var(--secondary-color);
+}
+
+/* Social media icons */
+
+.social-icons {
+    height: 20px;
+    width: 20px;
+    opacity: 0.7;
+}
+.social-icons:hover {
+    opacity: 1;
+}
+
 /* FOOTER  */
 
 footer .footer-bottom-container {
@@ -34,6 +51,17 @@ footer .footer-bottom-container .img-apoios {
     width: auto;
 }
 
+footer .footer-logo img {
+    max-height: 80px;
+    height: 100%;
+    width: auto;
+}
+
+/* Social media icons */
+footer .social-icons {
+    margin-right: 6px;
+}
+
 /* Eniciale – slider "Os nossos serviços": equal height */
 .services-swiper .swiper-wrapper {
     align-items: stretch; /* todos os slides esticam à mesma altura */
@@ -56,4 +84,10 @@ footer .footer-bottom-container .img-apoios {
 
 .services-swiper .services-box-content {
     margin-top: auto; /* empurra o texto para baixo, botão fica alinhado */
+}
+
+/* Cards Página Sobre - Same height */
+
+.about-section .feature-box {
+    height: 100%;
 }
