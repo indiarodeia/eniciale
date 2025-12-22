@@ -91,3 +91,83 @@ footer .social-icons {
 .about-section .feature-box {
     height: 100%;
 }
+
+/* BANNER - LANDING PAGE - Video */
+/* .hero-video-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.hero-video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); 
+    z-index: 1;
+}
+
+.hero-video-content {
+    z-index: 2;
+}
+ */
+
+/* SERVIçOS PAGE */
+/* Igualar alturas dos cards */
+.services-box-style-03 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper interno ocupa toda a altura */
+.services-box-style-03 > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Conteúdo (título + descrição) fica no topo */
+.services-box-style-03 .p-30px {
+    display: flex;
+    flex-direction: column;
+}
+
+/* O texto não cresce */
+.services-box-style-03 .p-30px p {
+    margin-bottom: 0;
+}
+
+/* Espaço flexível ENTRE descrição e botão */
+.services-box-style-03 .border-top {
+    margin-top: auto;
+}
+
+/* GRELHA PARCEIROS / FORNECEDORES */
+
+/* Parceiros: imagens sempre quadradas e alinhadas */
+.parceiros-grid .portfolio-image {
+    aspect-ratio: 1 / 1; /* força quadrado */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*  background: #fff; */
+}
+
+.parceiros-grid .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* NÃO corta logótipos */
+    padding: 18px; /* ajusta para “respirar” melhor */
+    display: block;
+}
