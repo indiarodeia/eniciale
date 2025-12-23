@@ -171,3 +171,32 @@ footer .social-icons {
     padding: 18px; /* ajusta para “respirar” melhor */
     display: block;
 }
+
+/* VIDEO LANDING PAGE */
+/* About section video: evita “rebentar” layout e mantém proporção */
+.about-video-box {
+    width: 100%;
+    height: 600px; /* desktop */
+    overflow: hidden;
+    border-radius: 8px; /* opcional */
+}
+
+.about-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* corta sem distorcer */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 991.98px) {
+    .about-video-box {
+        height: 400px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-video-box {
+        height: 260px;
+    }
+}
