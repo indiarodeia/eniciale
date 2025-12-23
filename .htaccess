@@ -1,48 +1,33 @@
 # Desactivar listagem de diretórios
 Options -Indexes
 
-# ------------------------------------------------------------------
-# 1) Canonical: HTTPS + domínio (escolhe www OU sem www)
-# ------------------------------------------------------------------
 RewriteEngine On
 
-# ======= VERSÃO SEM WWW (https://eniciale.pt) =======
+# ------------------------------------------------------------------
+# 1) Canonical: HTTPS + domínio sem www (https://eniciale.pt)
+# ------------------------------------------------------------------
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^eniciale\.pt$ [NC]
 RewriteRule ^(.*)$ https://eniciale.pt/$1 [L,R=301]
 
-# ======= SE QUISERES COM WWW (https://www.eniciale.pt),
-# comenta o bloco de cima e descomenta este:
-#
-# RewriteCond %{HTTPS} !=on [OR]
-# RewriteCond %{HTTP_HOST} !^www\.eniciale\.pt$ [NC]
-# RewriteRule ^(.*)$ https://www.eniciale.pt/$1 [L,R=301]
 # ------------------------------------------------------------------
-
-
-# ------------------------------------------------------------------
-# 2) Remover .html da URL (também em subpastas como /html/)
+# 2) Remover .html da URL (exclui 404.html)
 #    - /sobre.html  -> redireciona para /sobre
 # ------------------------------------------------------------------
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteCond %1 !^404$ [NC]
 RewriteRule ^ %1 [R=301,L]
 
-
 # ------------------------------------------------------------------
-# 3) Permitir aceder sem extensão
+# 3) Permitir aceder sem extensão (exclui /404)
 #    - /sobre   -> carrega /sobre.html
-#    - /html/servicos -> carrega /html/servicos.html
 # ------------------------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/404/?$ [NC]
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
 
-
 # ------------------------------------------------------------------
-# 4) Página 404 personalizada
-#    Cria um ficheiro /404.html (pode usar o teu layout base)
+# 4) Página 404 personalizada (na raiz)
 # ------------------------------------------------------------------
 ErrorDocument 404 /404.html
-
-# (Opcional futuro) Se um dia tiveres PHP e quiseres o mesmo para .php,
-# podemos adicionar regras semelhantes específicas para essas páginas.
