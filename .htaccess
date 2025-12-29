@@ -11,12 +11,12 @@ RewriteCond %{HTTP_HOST} !^eniciale\.pt$ [NC]
 RewriteRule ^(.*)$ https://eniciale.pt/$1 [L,R=301]
 
 # ------------------------------------------------------------------
-# 2) Remover .html da URL (exclui 404.html)
-#    - /sobre.html  -> redireciona para /sobre
+# 2) Remover .html da URL (exclui 404.html e index.html)
+#    - /sobre.html  -> /sobre
 # ------------------------------------------------------------------
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
-RewriteCond %1 !^404$ [NC]
-RewriteRule ^ %1 [R=301,L]
+RewriteCond %1 !^(404|index)$ [NC]
+RewriteRule ^ /%1 [R=301,L]
 
 # ------------------------------------------------------------------
 # 3) Permitir aceder sem extensão (exclui /404)

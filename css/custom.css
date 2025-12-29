@@ -1,23 +1,31 @@
-/* HEADER - NAV BAR LOGO */
+/* =========================================================
+   ENICIALE — CUSTOM.CSS (Organizado)
+   ========================================================= */
+
+/* =========================================================
+   1) HEADER / NAV
+   ========================================================= */
+
+/* Logo */
 header .navbar-brand img {
     max-height: 44px;
 }
-header .navbar-brand {
-    padding: 12px 0;
-}
-
+header .navbar-brand,
 header.sticky .navbar-brand {
     padding: 12px 0;
 }
 
-/* Active link */
+/* Active / hover link
+   Nota: o teu HTML usa .nav-link active em alguns sítios (ex: parceiros)
+   mas aqui só estás a tratar .nav-item.active. Se quiseres cobrir ambos,
+   adiciona também ".nav-link.active" (ver abaixo). */
 .navbar .navbar-nav .nav-item:hover .nav-link,
-.navbar .navbar-nav .nav-item.active .nav-link {
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-link.active {
     color: var(--secondary-color);
 }
 
-/* Social media icons */
-
+/* Social icons (header + geral) */
 .social-icons {
     height: 20px;
     width: 20px;
@@ -27,29 +35,9 @@ header.sticky .navbar-brand {
     opacity: 1;
 }
 
-/* FOOTER  */
-
-footer .footer-bottom-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background-color: #000;
-    padding: 20px;
-}
-footer .footer-bottom-container a {
-    height: 34px;
-}
-
-footer .footer-bottom-container .img-apoios {
-    height: 34px;
-    width: auto;
-}
+/* =========================================================
+   2) FOOTER
+   ========================================================= */
 
 footer .footer-logo img {
     max-height: 80px;
@@ -57,19 +45,89 @@ footer .footer-logo img {
     width: auto;
 }
 
-/* Social media icons */
+/* barra apoios */
+footer .footer-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    padding: 20px;
+}
+footer .footer-bottom-container a {
+    height: 34px;
+}
+footer .footer-bottom-container .img-apoios {
+    height: 34px;
+    width: auto;
+}
+
+/* Social icons no footer */
 footer .social-icons {
     margin-right: 6px;
 }
 
-/* Eniciale – slider "Os nossos serviços": equal height */
+/* =========================================================
+   3) LANDING — HERO / SLIDER VIDEO (texto por cima do vídeo)
+   ========================================================= */
+
+/* Estrutura base do slide */
+.swiper-slide {
+    position: relative;
+}
+
+/* Vídeo de fundo */
+.slider-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Overlay por cima do vídeo (para legibilidade) */
+.slider-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Conteúdo por cima do overlay */
+.swiper-slide > .container,
+.swiper-slide > .container-fluid {
+    position: relative;
+    z-index: 2;
+}
+
+/* Garantia extra: texto e CTAs no topo (se algum estilo herdar opacidades/z-index) */
+.swiper-slide h1,
+.swiper-slide .fs-20,
+.swiper-slide a,
+.swiper-slide span {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================================
+   4) LANDING — "OS NOSSOS SERVIÇOS" (Swiper) — equal height
+   ========================================================= */
+
 .services-swiper .swiper-wrapper {
-    align-items: stretch; /* todos os slides esticam à mesma altura */
+    align-items: stretch;
 }
 
 .services-swiper .swiper-slide {
-    display: flex; /* permite o stretch funcionar */
+    display: flex;
     height: auto;
+}
+
+@media (max-width: 575px) {
+    .services-swiper .swiper-slide {
+        display: block;
+    }
 }
 
 .services-swiper .services-box-style-02 {
@@ -82,161 +140,111 @@ footer .social-icons {
     flex-direction: column;
 }
 
+/* Empurra o conteúdo para alinhar ações */
 .services-swiper .services-box-content {
-    margin-top: auto; /* empurra o texto para baixo, botão fica alinhado */
+    margin-top: auto;
 }
 
-/* Cards Página Sobre - Same height */
+/* =========================================================
+   5) PÁGINA SOBRE — cards / vídeo
+   ========================================================= */
 
+/* Cards "feature-box" com mesma altura (se realmente estiver dentro de .about-section) */
 .about-section .feature-box {
     height: 100%;
 }
 
-/* BANNER - LANDING PAGE - Video */
-/* .hero-video-slide {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-}
-
-.hero-video-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45); 
-    z-index: 1;
-}
-
-.hero-video-content {
-    z-index: 2;
-}
- */
-
-/* SERVIçOS PAGE */
-/* Igualar alturas dos cards */
-.services-box-style-03 {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Wrapper interno ocupa toda a altura */
-.services-box-style-03 > div {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-/* Conteúdo (título + descrição) fica no topo */
-.services-box-style-03 .p-30px {
-    display: flex;
-    flex-direction: column;
-}
-
-/* O texto não cresce */
-.services-box-style-03 .p-30px p {
-    margin-bottom: 0;
-}
-
-/* Espaço flexível ENTRE descrição e botão */
-.services-box-style-03 .border-top {
-    margin-top: auto;
-}
-
-/* GRELHA PARCEIROS / FORNECEDORES */
-
-/* Parceiros: imagens sempre quadradas e alinhadas */
-.parceiros-grid .portfolio-image {
-    aspect-ratio: 1 / 1; /* força quadrado */
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*  background: #fff; */
-}
-
-.parceiros-grid .portfolio-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* NÃO corta logótipos */
-    padding: 18px; /* ajusta para “respirar” melhor */
-    display: block;
-}
-
-/* VIDEO LANDING PAGE */
-/* About section video: evita “rebentar” layout e mantém proporção */
+/* Vídeo da secção Sobre (landing) */
 .about-video-box {
     width: 100%;
-    height: 600px; /* desktop */
+    height: 600px;
     overflow: hidden;
-    border-radius: 8px; /* opcional */
+    border-radius: 8px;
 }
 
 .about-video {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover; /* corta sem distorcer */
+    object-fit: cover;
 }
 
-/* Ajustes responsivos */
+/* Responsivo */
 @media (max-width: 991.98px) {
     .about-video-box {
         height: 400px;
     }
 }
-
 @media (max-width: 575.98px) {
     .about-video-box {
         height: 260px;
     }
 }
 
-/* Background video for slider - LANDING PAGE */
-.slider-bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-}
-
-/* camada escura por cima do vídeo */
-.slider-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 1;
-}
-
-/* garantir que o conteúdo fica acima */
-.swiper-slide > .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Video pagina sobre.html */
+/* Vídeo na página sobre.html (classe usada noutro contexto) */
 .video-max-height {
-    height: 600px;
+    max-height: 600px;
     overflow: hidden;
     border-radius: 8px !important;
     width: auto !important;
     margin: auto;
+    max-width: 100%;
 }
 
-/* custom to stop word from breaking */
+/* =========================================================
+   6) SERVIÇOS PAGE — equal height (cards style-03)
+   ========================================================= */
+
+.services-box-style-03 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-box-style-03 > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.services-box-style-03 .p-30px {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-box-style-03 .p-30px p {
+    margin-bottom: 0;
+}
+
+.services-box-style-03 .border-top {
+    margin-top: auto;
+}
+
+/* =========================================================
+   7) PARCEIROS — grid de logos
+   ========================================================= */
+
+.parceiros-grid .portfolio-image {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parceiros-grid .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 18px;
+    display: block;
+}
+
+/* =========================================================
+   8) UTILITÁRIOS
+   ========================================================= */
+
 .word-break {
     word-break: normal;
 }
