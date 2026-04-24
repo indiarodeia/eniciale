@@ -32,6 +32,30 @@
     <meta name="twitter:description"
         content="Distribuição alimentar e logística nos Açores. Armazéns na Terceira e em São Miguel.">
     <meta name="twitter:image" content="https://eniciale-comercio-distribuicao.com/images/og-eniciale.jpg">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Eniciale - Comércio e Distribuição de Produtos Alimentares, Lda.",
+            "url": "https://eniciale-comercio-distribuicao.com/",
+            "logo": "https://eniciale-comercio-distribuicao.com/images/logo-eniciale.png",
+            "image": "https://eniciale-comercio-distribuicao.com/images/og-eniciale.jpg",
+            "telephone": "+351295543740",
+            "email": "geral@eniciale.pt",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Parque Industrial da Ilha Terceira",
+                "postalCode": "9760-100",
+                "addressLocality": "Praia da Vitória",
+                "addressRegion": "Açores",
+                "addressCountry": "PT"
+            },
+            "sameAs": [
+                "https://instagram.com/enicialelda",
+                "https://www.facebook.com/profile.php?id=100057497168084"
+            ]
+        }
+    </script>
 
     <!-- favicon icon -->
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -51,6 +75,7 @@
 </head>
 
 <body data-mobile-nav-style="classic">
+    <a class="skip-link" href="#main-content">Saltar para o conteúdo principal</a>
     <!-- start header -->
     <header class="header-with-topbar">
         <div class="header-top-bar top-bar-dark bg-dark-gray">
@@ -71,9 +96,9 @@
                         </span>
                     </div>
                     <div class="col-md-5 text-end d-none d-lg-flex fs-15">
-                        <a href="https://instagram.com/enicialelda" target="_blank" class="me-25px lg-me-15px">
+                        <a href="https://instagram.com/enicialelda" target="_blank" rel="noopener noreferrer" class="me-25px lg-me-15px">
                             <img src="images/icon-instagram.svg" class="social-icons" alt="Instagram Eniciale"></a>
-                        <a href="https://www.facebook.com/profile.php?id=100057497168084" target="_blank"
+                        <a href="https://www.facebook.com/profile.php?id=100057497168084" target="_blank" rel="noopener noreferrer"
                             class="me-25px lg-me-15px">
                             <img src="images/icon-facebook.svg" class="social-icons" alt="Facebook Eniciale"></a>
                     </div>
@@ -140,6 +165,7 @@
         <!-- end navigation -->
     </header>
     <!-- end header -->
+    <main id="main-content">
 
     <!-- start slider -->
     <section class="p-0 top-space-margin full-screen md-h-600px sm-h-650px">
@@ -150,8 +176,9 @@
                 <div class="swiper-slide position-relative overflow-hidden">
 
                     <!-- vídeo de fundo -->
-                    <video class="slider-bg-video" autoplay muted loop playsinline preload="metadata">
-                        <source src="images/video/eniciale-videopromocional.mp4" type="video/mp4">
+                    <video class="slider-bg-video" autoplay muted loop playsinline preload="metadata"
+                        poster="images/bg-header.png" aria-hidden="true">
+                        <source src="images/video/eniciale-videopromocional-optimized.mp4" type="video/mp4">
                     </video>
 
                     <!-- overlay opcional (recomendado para legibilidade do texto) -->
@@ -238,9 +265,8 @@
 
                     <div class="about-video-box" data-bottom-top="transform: translateY(-50px)"
                         data-top-bottom="transform: translateY(50px)">
-                        <video class="about-video" autoplay muted loop playsinline preload="metadata"
-                            aria-label="Vídeo institucional da Eniciale">
-                            <source src="images/video/video-eniciale.mp4" type="video/mp4">
+                        <video class="about-video deferred-video" autoplay muted loop playsinline preload="none" poster="images/bg-header.png" aria-label="Vídeo institucional da Eniciale">
+                            <source data-src="images/video/video-eniciale-optimized.mp4" type="video/mp4">
                             O seu navegador não suporta vídeos HTML5.
                         </video>
                     </div>
@@ -600,7 +626,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-abril.png" alt="Abril" loading="lazy" />
+                                    <img src="images/parceiros/logo-abril.png" alt="Abril" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -609,7 +635,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-unilever.png" alt="Unilever" loading="lazy" />
+                                    <img src="images/parceiros/logo-unilever.png" alt="Unilever" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -618,7 +644,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-frami.png" alt="Frami" loading="lazy" />
+                                    <img src="images/parceiros/logo-frami.png" alt="Frami" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -627,7 +653,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-delisur.png" alt="Delisur" loading="lazy" />
+                                    <img src="images/parceiros/logo-delisur.png" alt="Delisur" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -637,7 +663,7 @@
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
                                     <img src="images/parceiros/logo-estrela-galicia.png" alt="Estrella Galicia"
-                                        loading="lazy" />
+                                        loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -646,7 +672,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-gallo.png" alt="Gallo" loading="lazy" />
+                                    <img src="images/parceiros/logo-gallo.png" alt="Gallo" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -655,7 +681,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-gullon.png" alt="Gullón" loading="lazy" />
+                                    <img src="images/parceiros/logo-gullon.png" alt="Gullón" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -664,7 +690,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-prozis.png" alt="Prozis" loading="lazy" />
+                                    <img src="images/parceiros/logo-prozis.png" alt="Prozis" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -674,7 +700,7 @@
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
                                     <img src="images/parceiros/logo-baker-and-baker.png" alt="Baker &amp; Baker"
-                                        loading="lazy" />
+                                        loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -683,7 +709,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-iglo.png" alt="Iglo" loading="lazy" />
+                                    <img src="images/parceiros/logo-iglo.png" alt="Iglo" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -692,7 +718,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-ola.png" alt="Olá" loading="lazy" />
+                                    <img src="images/parceiros/logo-ola.png" alt="Olá" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -701,7 +727,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-limiano.png" alt="Limiano" loading="lazy" />
+                                    <img src="images/parceiros/logo-limiano.png" alt="Limiano" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -710,7 +736,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-lactacor.png" alt="Lactaçor" loading="lazy" />
+                                    <img src="images/parceiros/logo-lactacor.png" alt="Lactaçor" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -720,7 +746,7 @@
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
                                     <img src="images/parceiros/logo-pernod-ricard.png" alt="Pernod Ricard"
-                                        loading="lazy" />
+                                        loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -729,7 +755,7 @@
                             <div
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
-                                    <img src="images/parceiros/logo-caramulo.png" alt="Caramulo" loading="lazy" />
+                                    <img src="images/parceiros/logo-caramulo.png" alt="Caramulo" loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -739,7 +765,7 @@
                                 class="position-relative overflow-hidden client-image transition-inner-all parceiros-slide">
                                 <a href="parceiros.html" class="parceiros-slide-inner">
                                     <img src="images/parceiros/logo-solan-de-cabras.png" alt="Solán de Cabras"
-                                        loading="lazy" />
+                                        loading="lazy" decoding="async" />
                                 </a>
                             </div>
                         </div>
@@ -777,7 +803,7 @@
     </section>
     <!-- end section -->
 
-
+    </main>
     <!-- start footer -->
     <footer class="fs-17 footer-dark p-0 bg-dark-gray">
         <div class="container">
@@ -819,11 +845,11 @@
                     <span class="fs-18 d-block text-white fw-500 mb-10px">Siga-nos nas redes sociais</span>
                     <div class="mb-15px">
                         <div class="fs-15 d-flex justify-content-lg-start justify-content-center flex-wrap gap-2">
-                            <a href="https://instagram.com/enicialelda" target="_blank" class="me-15px lg-me-15px">
+                            <a href="https://instagram.com/enicialelda" target="_blank" rel="noopener noreferrer" class="me-15px lg-me-15px">
                                 <img src="images/icon-instagram.svg" class="social-icons"
                                     alt="Instagram Eniciale">Instagram
                             </a>
-                            <a href="https://www.facebook.com/profile.php?id=100057497168084" target="_blank"
+                            <a href="https://www.facebook.com/profile.php?id=100057497168084" target="_blank" rel="noopener noreferrer"
                                 class="me-15px lg-me-15px">
                                 <img src="images/icon-facebook.svg" class="social-icons"
                                     alt="Facebook Eniciale">Facebook
@@ -845,15 +871,14 @@
                 <div class="col-lg-9 pt-10px pb-10px fs-15 last-paragraph-no-margin text-center order-2 order-sm-1">
                     <p>
                         Copyright © <span id="currentYear"></span> All rights reserved | by
-                        <a target="_blank" href="https://www.indiarodeia.com/"
-                            rel="noopener noreferrer">india.rodeia</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.indiarodeia.com/">india.rodeia</a>
                     </p>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom-container">
-            <a title="Co-financed project" target="_blank" href="apoios.html">
+            <a title="Co-financed project" href="apoios.html">
                 <img class="img-apoios" src="images/barra-prr.png" alt="Co-financed Project">
             </a>
         </div>
@@ -863,7 +888,7 @@
 
     <!-- start scroll progress -->
     <div class="scroll-progress d-none d-xxl-block">
-        <a href="#" class="scroll-top" aria-label="scroll">
+        <a href="#" class="scroll-top" aria-label="Voltar ao topo">
             <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
         </a>
     </div>
@@ -879,6 +904,48 @@
             if (yearSpan) {
                 yearSpan.textContent = new Date().getFullYear();
             }
+
+            var deferredVideos = document.querySelectorAll(".deferred-video");
+            if (!deferredVideos.length) {
+                return;
+            }
+
+            var loadVideo = function (video) {
+                if (!video || video.dataset.loaded === "true") {
+                    return;
+                }
+
+                var sources = video.querySelectorAll("source[data-src]");
+                sources.forEach(function (source) {
+                    source.src = source.dataset.src;
+                    source.removeAttribute("data-src");
+                });
+
+                video.load();
+                video.dataset.loaded = "true";
+            };
+
+            if (!("IntersectionObserver" in window)) {
+                deferredVideos.forEach(loadVideo);
+                return;
+            }
+
+            var observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    loadVideo(entry.target);
+                    obs.unobserve(entry.target);
+                });
+            }, {
+                rootMargin: "300px 0px"
+            });
+
+            deferredVideos.forEach(function (video) {
+                observer.observe(video);
+            });
         });
     </script>
 

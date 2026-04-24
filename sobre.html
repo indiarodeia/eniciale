@@ -10,7 +10,7 @@
     <meta name="description"
         content="Conheça a Eniciale: empresa de comércio e distribuição de produtos alimentares, com armazéns na Ilha Terceira e em São Miguel, focada em serviço, eficiência e proximidade.">
 
-    <link rel="canonical" href="https://eniciale-comercio-distribuicao.com/html/sobre.html">
+    <link rel="canonical" href="https://eniciale-comercio-distribuicao.com/sobre.html">
     <meta name="theme-color" content="#0B1F2A">
     <meta name="robots" content="index,follow">
 
@@ -21,7 +21,7 @@
     <meta property="og:title" content="Sobre nós — Eniciale">
     <meta property="og:description"
         content="Conheça a Eniciale: grossista e distribuição alimentar nos Açores, com operação na Ilha Terceira e em São Miguel.">
-    <meta property="og:url" content="https://eniciale-comercio-distribuicao.com/html/sobre.html">
+    <meta property="og:url" content="https://eniciale-comercio-distribuicao.com/sobre.html">
     <meta property="og:image" content="https://eniciale-comercio-distribuicao.com/images/og-eniciale.jpg">
     <meta property="og:image:alt" content="Eniciale — Distribuição e Logística Alimentar nos Açores">
     <meta property="og:image:width" content="1200">
@@ -55,6 +55,7 @@
 
 
 <body data-mobile-nav-style="classic">
+    <a class="skip-link" href="#main-content">Saltar para o conteúdo principal</a>
     <!-- start header -->
     <header class="header-with-topbar">
         <div class="header-top-bar top-bar-dark bg-dark-gray">
@@ -75,9 +76,9 @@
                         </span>
                     </div>
                     <div class="col-md-5 text-end d-none d-lg-flex fs-15">
-                        <a href="https://instagram.com/enicialelda" target="_blank" class="me-25px lg-me-15px">
+                        <a href="https://instagram.com/enicialelda" target="_blank" rel="noopener noreferrer" class="me-25px lg-me-15px">
                             <img src="images/icon-instagram.svg" class="social-icons" alt="Instagram Eniciale"></a>
-                        <a href="https://www.facebook.com/profile.php?id=100057497168084" target="_blank"
+                        <a href="https://www.facebook.com/profile.php?id=100057497168084" target="_blank" rel="noopener noreferrer"
                             class="me-25px lg-me-15px">
                             <img src="images/icon-facebook.svg" class="social-icons" alt="Facebook Eniciale"></a>
                     </div>
@@ -144,6 +145,7 @@
         <!-- end navigation -->
     </header>
     <!-- end header -->
+    <main id="main-content">
 
 
     <!-- start page title -->
@@ -309,10 +311,10 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <video class="w-100 border-radius-8px video-max-height" autoplay muted loop playsinline
-                        preload="metadata" aria-label="Vídeo institucional da Eniciale" poster="images/bg-header.png">
+                    <video class="w-100 border-radius-8px video-max-height deferred-video" autoplay muted loop playsinline
+                        preload="none" aria-label="Vídeo institucional da Eniciale" poster="images/bg-header.png">
 
-                        <source src="images/video/eniciale-videopromocional.mp4" type="video/mp4">
+                        <source data-src="images/video/eniciale-videopromocional-optimized.mp4" type="video/mp4">
                         O seu navegador não suporta vídeos HTML5.
                     </video>
 
@@ -447,7 +449,7 @@
     </section>
     <!-- end section -->
 
-
+    </main>
     <footer class="fs-17 footer-dark p-0 bg-dark-gray">
         <div class="container">
             <div class="row justify-content-center pt-6 sm-pt-40px text-sm-start text-center">
@@ -488,11 +490,11 @@
                     <span class="fs-18 d-block text-white fw-500 mb-10px">Siga-nos nas redes sociais</span>
                     <div class="mb-15px">
                         <div class="fs-15 d-flex justify-content-lg-start justify-content-center flex-wrap gap-2">
-                            <a href="https://instagram.com/enicialelda" target="_blank" class="me-15px lg-me-15px">
+                            <a href="https://instagram.com/enicialelda" target="_blank" rel="noopener noreferrer" class="me-15px lg-me-15px">
                                 <img src="images/icon-instagram.svg" class="social-icons"
                                     alt="Instagram Eniciale">Instagram
                             </a>
-                            <a href="https://www.facebook.com/profile.php?id=100057497168084" target="_blank"
+                            <a href="https://www.facebook.com/profile.php?id=100057497168084" target="_blank" rel="noopener noreferrer"
                                 class="me-15px lg-me-15px">
                                 <img src="images/icon-facebook.svg" class="social-icons"
                                     alt="Facebook Eniciale">Facebook
@@ -514,14 +516,14 @@
                 <div class="col-lg-9 pt-10px pb-10px fs-15 last-paragraph-no-margin text-center order-2 order-sm-1">
                     <p>
                         Copyright © <span id="currentYear"></span> All rights reserved | by
-                        <a target="_blank" href="https://www.indiarodeia.com/">india.rodeia</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.indiarodeia.com/">india.rodeia</a>
                     </p>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom-container">
-            <a title="Co-financed project" target="_blank" href="apoios.html">
+            <a title="Co-financed project" href="apoios.html">
                 <img class="img-apoios" src="images/barra-prr.png" alt="Co-financed Project">
             </a>
         </div>
@@ -529,7 +531,7 @@
 
     <!-- start scroll progress -->
     <div class="scroll-progress d-none d-xxl-block">
-        <a href="#" class="scroll-top" aria-label="scroll">
+        <a href="#" class="scroll-top" aria-label="Voltar ao topo">
             <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
         </a>
     </div>
@@ -545,6 +547,48 @@
             if (yearSpan) {
                 yearSpan.textContent = new Date().getFullYear();
             }
+
+            var deferredVideos = document.querySelectorAll(".deferred-video");
+            if (!deferredVideos.length) {
+                return;
+            }
+
+            var loadVideo = function (video) {
+                if (!video || video.dataset.loaded === "true") {
+                    return;
+                }
+
+                var sources = video.querySelectorAll("source[data-src]");
+                sources.forEach(function (source) {
+                    source.src = source.dataset.src;
+                    source.removeAttribute("data-src");
+                });
+
+                video.load();
+                video.dataset.loaded = "true";
+            };
+
+            if (!("IntersectionObserver" in window)) {
+                deferredVideos.forEach(loadVideo);
+                return;
+            }
+
+            var observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    loadVideo(entry.target);
+                    obs.unobserve(entry.target);
+                });
+            }, {
+                rootMargin: "300px 0px"
+            });
+
+            deferredVideos.forEach(function (video) {
+                observer.observe(video);
+            });
         });
     </script>
 
