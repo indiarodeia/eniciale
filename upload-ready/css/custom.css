@@ -50,15 +50,18 @@ footer .footer-bottom-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 24px;
+    background-color: #dbdbdb;
+    padding: 20px 15px;
 }
 footer .footer-bottom-container a {
     height: 40px;
 }
 footer .footer-bottom-container .img-apoios {
-    height: 45px;
+    max-height: 45px;
     width: auto;
+    max-width: 100%;
 }
 
 /* Social icons no footer */
